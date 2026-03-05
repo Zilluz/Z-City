@@ -198,7 +198,7 @@ module[2] = function(owner, org, timeValue)
 	if not head then head = owner:GetPos() end
 	
 	local inwater = bit_band(util_PointContents(head),CONTENTS_WATER) == CONTENTS_WATER
-	
+	-- test
 	local success = owner:IsBerserk() or (not org.heartstop and org.alive and not (org.brain >= 0.4 and math.random(10 - (org.brain * 10)) < 4) and org.lungsfunction)
 	if success and owner:IsPlayer() and inwater then success = false end
 	if success and org.choking then org.needfake = true success = false end
